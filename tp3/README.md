@@ -1,0 +1,23 @@
+ejecucion1: sinhilos:5.17938 segundos
+	    conhilos:4.00972 segundos
+ejecucion2:sinhilos:5.15340 segundos
+	   conhilos:4.02542 segundos
+ejecucion3:sinhilos:5.13686 segundos
+	   conhilos:4.15249 segundos
+ejecucion4:sinhilos:5.15417 segundos
+	   conhilos:4.02192 segundos
+ejecucuion5:sinhilos:5.15174 segundos
+	    conhilos:4.01702 segundos
+
+1)
+  a- Lo que se nota con respecto al tiempo de ejecucion, es que con hilos tarda menos que sin hilos
+    se nota que el tiempo de ejecucion es que con hilos no pasa de 5 segundos y sin hilos es mas de 5 segundos
+  b- Los tiempos de ejecucion no son iguales
+
+Ejecucion de suma_resta.py
+  Sin lineas 11,12,19 y 20:
+	Tiempo de ejecucion: al rededor de 0.02200 segundos
+	Resultado final:0
+  Con lineas 11,12,19 y 20:
+	El tiempo de ejecucion se incrementa, porque el programa espera a que el primer thread termine de ejecutarse 
+para comensar el otro.Tambien el resultado cambia dependiendo de la prioridad que le de el sistema a cada hilo
