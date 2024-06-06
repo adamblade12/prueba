@@ -18,6 +18,9 @@ Ejecucion de suma_resta.py
   Sin lineas 11,12,19 y 20:
 	Tiempo de ejecucion: al rededor de 0.02200 segundos
 	Resultado final:0
+	Los hilos se ejecutan simultaneamente, acceden al recurso compartido pero nunguno lo llega a actualizar.
+	No tiene retraso por la ausencia del bucle for con pass que simula tiempo de trabajo para la maquina
   Con lineas 11,12,19 y 20:
-	El tiempo de ejecucion se incrementa, porque el programa espera a que el primer thread termine de ejecutarse 
-para comensar el otro.Tambien el resultado cambia dependiendo de la prioridad que le de el sistema a cada hilo
+	La zona critica del programa seria cuando los hilos quieren leer y modificar un recurso compartido, en este caso, la variable acumulador.
+	Ambos hilos tienen acceso al acumulador al mismo tiempo lo que causa retrasos porque si un hilo intenta acceder al acumulador y el otro lo esta usando, este tendra que esperar a que el otro termine para recien acceder al acumulador.Esto causa que el tiempo de ejecucion crezca.
+	Si los hilos acceden al acumulador (zona critica) sin un orden, el resultado final de acumulador depende del orden en que se ejecutan los hilos, o sea es impredecible, esto seria una "race condition"
